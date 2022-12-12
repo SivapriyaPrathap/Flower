@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+<div class="card bg-dark text-white">
+  <img src="{{flower.img.url}}" class="card-img" alt="...">
+
+  <div class="card-img-overlay" style="color:white">
+    <h5 class="card-title" >{{flower.name}}</h5>
+       <p class="card-text">Mostly seen in "{{flower.places}}"</p>
+    <p class="card-text">{{flower.des}}</p>
+       <a href="{% url 'flowerapp:update' flower.id %}" class="btn btn-warning" role="button">UPDATE</a>
+      <a href="{% url 'flowerapp:delete' flower.id %}" class="btn btn-danger" role="button">DELETE</a>
+
+
+  </div>
+
+</div>
+
+    </div>
+    </div>
+{% endblock %}

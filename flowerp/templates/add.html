@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<body style="background-color:#13726B">
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>NAME OF THE FLOWER</label><br>
+    <input type="text" name="name" placeholder="name of the flower"><br>
+    <label>NAME OF THE PLACE</label><br>
+    <input type="text" name="places" placeholder="name of the place"><br>
+    <label>DETAILS</label><br>
+    <input type="text" name="des" placeholder="details"><br>
+    <label>IMAGE OF THE FLOWER</label><br>
+    <input type="file" name="img"><br>
+    <input type="submit">
+</form>
+</body>
+{% endblock %}

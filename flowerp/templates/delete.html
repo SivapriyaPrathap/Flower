@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<body style="background-color:#13726B">
+<form method="POST" enctype="multipart/form-data" style="white">
+    {% csrf_token %}
+    DO YOU WANT TO DELETE THIS ITEM
+    <input type="submit">
+</form>
+</body>
+{% endblock %}
